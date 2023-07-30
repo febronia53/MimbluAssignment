@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchFragment">
+
+    <TextView
+        android:id="@+id/text_app_name"
+        style="@style/AppNameTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/icon_back"
+        app:layout_constraintBottom_toBottomOf="@+id/text_app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_app_name" />
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/mainTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="Pick Your Plan to Continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_app_name" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/BodyTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Mimblu is up to 5x cheaper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/BodyTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="than in-person therapy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <LinearLayout
+        android:id="@+id/linear_matches_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3">
+
+        <TextView
+            android:id="@+id/text_mimblu_lite"
+            style="@style/MatchTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_weight="1"
+            android:text="@string/mimblu_lite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_mimblu_plus"
+            style="@style/MatchTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_weight="1"
+            android:text="@string/mimblu_plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_mimblu_live"
+            style="@style/MatchTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_weight="1"
+            android:text="@string/mimblu_live"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+      android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/matches_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_matches_type">
+
+        <TextView
+            android:id="@+id/text_type"
+            style="@style/BodyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text"
+            android:textSize="@dimen/text14"
+            app:layout_constraintBaseline_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+          android:drawablePadding="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_normal"
+            app:drawableEndCompat="@drawable/icon_text" />
+
+        <TextView
+            android:id="@+id/text_video"
+            style="@style/BodyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/video"
+            android:drawablePadding="@dimen/padding_small"
+            android:textSize="@dimen/text14"
+            android:paddingStart="@dimen/padding_small"
+            app:layout_constraintStart_toEndOf="@+id/text_type"
+            app:layout_constraintTop_toTopOf="@+id/text_type"
+            android:paddingTop="@dimen/padding_normal"
+            app:drawableEndCompat="@drawable/icon_video" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_matches"
+            style="@style/RecyclerSymptomsStyles"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_video"
+            tools:listitem="@layout/item_match" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

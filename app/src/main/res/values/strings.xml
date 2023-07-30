@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MimbluAssignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="symptoms_statment">I just want someone to talk to</string>
+    <string name="app">mimblu</string>
+    <string name="logout">Logout</string>
+    <string name="show_me_my_matches">Show Me My Matches</string>
+    <string name="mimblu_lite">Mimblu Lite</string>
+    <string name="mimblu_plus">Mimblu Plus</string>
+    <string name="mimblu_live">Mimblu Live.</string>
+    <string name="text">Text</string>
+    <string name="video">+ Video</string>
+    <string name="continue_statement">Continue</string>
+</resources>
